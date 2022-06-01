@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+.dark-mode {
+  background-color: hsl(230deg, 17%, 14%);
+}
+.dark-mode div.bg {
+  background-color: hsl(232deg, 19%, 15%);
+}
+.dark-mode header .top-left h2 {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode header p {
+  color: hsl(228deg, 34%, 66%);
+}
+.dark-mode #toggle {
+  background: linear-gradient(90deg, rgb(55, 143, 230) 0%, rgb(62, 218, 130) 100%);
+}
+.dark-mode #toggle::after {
+  background-color: hsl(228deg, 28%, 20%);
+  right: 5.1rem;
+  transition: 0.3s;
+}
+.dark-mode section.social-count .social {
+  background-color: hsl(228deg, 28%, 20%);
+}
+.dark-mode section.social-count div.header p {
+  color: hsl(228deg, 34%, 66%) !important;
+}
+.dark-mode section.social-count div.follower-count h1 {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode section.social-count div.follower-count p {
+  color: hsl(228deg, 34%, 66%) !important;
+}
+.dark-mode section.social-count .social:hover {
+  background-color: hsl(231deg, 21%, 25%);
+  transition: 0.3s;
+}
+.dark-mode section.overview .box {
+  background-color: hsl(228deg, 28%, 20%);
+}
+.dark-mode section.overview h4 {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode section.overview h6 {
+  color: hsl(228deg, 34%, 66%);
+}
+.dark-mode section.overview p.number {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark-mode section.overview .box:hover {
+  background-color: hsl(231deg, 21%, 25%);
+  transition: 0.3s;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+body h1, body h2, body .number {
+  color: hsl(230deg, 17%, 14%);
+}
+body div.bg {
+  background-color: hsl(225deg, 100%, 98%);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 9rem;
+}
+
+main {
+  width: 65%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+main header {
+  margin-bottom: 1.3rem;
+}
+main header p {
+  color: hsl(228deg, 12%, 44%);
+  font-size: 0.65rem;
+  font-weight: bold;
+}
+main header .top-left h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+main header .line {
+  background-color: hsl(228deg, 12%, 44%);
+  opacity: 0.5;
+  height: 1px;
+  margin: 0.5rem auto;
+}
+main header .top-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main header #toggle {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: hsl(230deg, 22%, 74%);
+  height: 1.35rem;
+  width: 2.8rem;
+  border-radius: 20px;
+  outline: none;
+}
+main header #toggle:hover {
+  background: linear-gradient(90deg, rgb(55, 143, 230) 0%, rgb(62, 218, 130) 100%);
+  transition: 0.4s;
+}
+main header #toggle::after {
+  content: "";
+  position: absolute;
+  top: 5rem;
+  right: 3.9rem;
+  height: 1.1rem;
+  width: 1.1rem;
+  background-color: hsl(227deg, 47%, 96%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+main section.social-count {
+  margin-bottom: 1.5rem;
+}
+main section.social-count .social + .social {
+  margin-top: 1rem;
+}
+main section.social-count .social {
+  background-color: hsl(227deg, 47%, 96%);
+  padding: 1rem 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main section.social-count .social div.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+main section.social-count .social div.header img {
+  width: 25%;
+  height: 0.8rem;
+  margin-right: 0.2rem;
+}
+main section.social-count .social div.header p {
+  color: hsl(228deg, 12%, 44%);
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+main section.social-count .social div.follower-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+main section.social-count .social div.follower-count h1 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+main section.social-count .social div.follower-count p {
+  color: hsl(228deg, 12%, 44%);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+main section.social-count .social div.stat {
+  display: flex;
+  align-items: center;
+}
+main section.social-count .social div.stat img {
+  width: 9%;
+  margin-right: 0.2rem;
+}
+main section.social-count .social div.stat p {
+  font-size: 0.55rem;
+}
+main section.social-count .social:hover {
+  background-color: hsl(231deg, 21%, 88%);
+  transition: 0.3s;
+}
+main section.social-count .facebook {
+  border-top: 3px solid hsl(208deg, 92%, 53%);
+}
+main section.social-count .facebook div.stat p {
+  color: hsl(163deg, 72%, 41%);
+}
+main section.social-count .twitter {
+  border-top: 3px solid hsl(203deg, 89%, 53%);
+}
+main section.social-count .twitter div.stat p {
+  color: hsl(163deg, 72%, 41%);
+}
+main section.social-count .instagram {
+  border-top: 3px solid rgb(192, 85, 140);
+}
+main section.social-count .instagram div.stat p {
+  color: hsl(163deg, 72%, 41%);
+}
+main section.social-count .youtube {
+  border-top: 3px solid hsl(348deg, 97%, 39%);
+}
+main section.social-count .youtube div.stat p {
+  color: hsl(356deg, 69%, 56%);
+}
+main h4 {
+  color: hsl(228deg, 12%, 44%);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+main section.overview .first-row {
+  margin-bottom: 0.6rem;
+}
+main section.overview h6 {
+  color: hsl(228deg, 12%, 44%);
+  font-size: 0.6rem;
+  margin-bottom: 1rem;
+}
+main section.overview .number {
+  font-weight: bold;
+}
+main section.overview .box + .box {
+  margin-top: 0.6rem;
+}
+main section.overview div.box {
+  background-color: hsl(227deg, 47%, 96%);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 5px;
+}
+main section.overview div.box div.stat img.social-icon {
+  width: 0.9rem;
+  display: block;
+  margin-left: auto;
+}
+main section.overview div.box .details {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.3rem;
+  align-items: center;
+}
+main section.overview div.box .details p {
+  font-size: 0.5rem;
+}
+main section.overview div.box .details img.arrow {
+  width: 0.35rem;
+  margin-right: 0.15rem;
+}
+main section.overview div.box:hover {
+  background-color: hsl(231deg, 21%, 88%);
+  transition: 0.3s;
+}
+main section.overview .green div.details p {
+  color: hsl(163deg, 72%, 41%);
+}
+main section.overview .red div.details p {
+  color: hsl(356deg, 69%, 56%);
+}
+
+@media (min-width: 650px) {
+  main {
+    width: 70%;
+  }
+  main header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  main header div.line {
+    display: none;
+  }
+  main header div.top-right p {
+    margin-right: 1rem;
+  }
+  main section.social-count {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  main section.social-count div.social {
+    margin-top: 0 !important;
+  }
+  main section.overview div.first-row, main section.overview div.second-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+  }
+  main section.overview div.box {
+    margin-top: 0 !important;
+  }
+}
+@media (min-width: 900px) {
+  main {
+    width: 90%;
+    max-width: 900px;
+  }
+  main section.social-count {
+    display: flex;
+    justify-content: space-between;
+  }
+  main section.social-count div.social {
+    flex-basis: 23%;
+  }
+  main section.overview {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  main section.overview h4 {
+    font-size: 1rem !important;
+  }
+  main section.overview div.first-row, main section.overview div.second-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  main section.overview .box {
+    flex-basis: 20%;
+    margin-top: 0 !important;
+  }
+}/*# sourceMappingURL=dashboard.css.map */

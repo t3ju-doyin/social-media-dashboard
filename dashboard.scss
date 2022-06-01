@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+$font: 'Inter', sans-serif;
+$lime-Green: hsl(163, 72%, 41%);
+$right-Red: hsl(356, 69%, 56%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(90deg, rgba(253,196,104,1) 0%, rgba(223,73,150,1) 92%);
+$youtube: hsl(348, 97%, 39%);
+
+
+$toggle-dark: linear-gradient(90deg, rgba(55,143,230,1) 0%, rgba(62,218,130,1) 100%);//dark mode
+$toggle-light: hsl(230, 22%, 74%); //light mode
+
+//dark mode
+$very-Dark-Blue1 : hsl(230, 17%, 14%); //bg
+$very-Dark-Blue2 : hsl(232, 19%, 15%); //top bg pattern
+$dark-Desaturated-Blue: hsl(228, 28%, 20%); //card bg
+$desaturated-Blue: hsl(228, 34%, 66%); //text
+$white: hsl(0, 0%, 100%); //text
+
+//light mode
+$white: hsl(0, 0%, 100%); //bg
+$very-Pale-Blue: hsl(225, 100%, 98%); //top bg pattern
+$light-Grayish-Blue : hsl(227, 47%, 96%); // card bg
+$dark-Grayish-Blue : hsl(228, 12%, 44%); // text
+$very-Dark-Blue: hsl(230, 17%, 14%); //text
+// @mixin common-styles {
+    
+// }
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+.dark-mode{
+    background-color: $very-Dark-Blue1;
+    @mixin dark-state-hover {
+        background-color: hsl(231, 21%, 25%);
+        transition: .3s;
+    }
+    div.bg{
+        background-color: $very-Dark-Blue2;
+    }
+    header{
+        .top-left h2{
+            color:$white ;
+        }
+        p{
+            color: $desaturated-Blue;
+        }
+    }
+    #toggle{
+        background: $toggle-dark;
+    }
+    #toggle::after{
+        background-color: $dark-Desaturated-Blue;
+        right: 5.1rem;
+        transition: .3s;
+    }
+    
+    section.social-count{
+        .social{
+            background-color: $dark-Desaturated-Blue;
+        }
+        div.header p{
+            color: $desaturated-Blue !important;
+        }
+        div.follower-count{
+            h1{
+                color: $white;
+            }
+            p{
+                color: $desaturated-Blue !important;
+            }
+        }
+        .social:hover{
+            @include dark-state-hover();
+        }
+    }
+    section.overview{
+        .box{
+            background-color: $dark-Desaturated-Blue;
+        }
+        h4{
+            color: $white;
+        }
+        h6{
+            color: $desaturated-Blue;
+        }
+        p.number{
+            color: $white;
+        }
+        .box:hover{
+            @include dark-state-hover();
+        }
+    }
+}
+body{
+    font-family: $font;
+    box-sizing: border-box;
+
+    h1,h2,.number{
+        color: $very-Dark-Blue;
+    }
+    div.bg{
+        background-color: $very-Pale-Blue;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        height: 9rem;
+    }
+}
+main{
+    width: 65%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    @mixin container-hover {
+        background-color: hsl(231, 21%, 88%);
+        transition: .3s;
+    }
+    
+    header{
+        margin-bottom: 1.3rem;
+        p{
+            color: $dark-Grayish-Blue;
+            font-size: .65rem;
+            font-weight: bold;
+        }
+       .top-left{
+            h2{
+                font-size: 1.1rem;
+                margin-bottom: .2rem;
+            }
+        } 
+        .line{
+            background-color: $dark-Grayish-Blue;
+            opacity: .5;
+            height: 1px;
+            margin: .5rem auto;
+        }
+        .top-right{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #toggle{
+            cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: $toggle-light;
+            height: 1.35rem;
+            width: 2.8rem;
+            border-radius: 20px;
+            outline: none;
+        }
+        #toggle:hover{
+            background: $toggle-dark;
+            transition: .4s;
+        }
+        #toggle::after{
+            content: '';
+            position: absolute;
+            top: 5rem;
+            right: 3.9rem;
+            height: 1.1rem;
+            width: 1.1rem;
+            background-color: $light-Grayish-Blue;
+            border-radius: 50%;
+            transition: .3s;
+            
+        }
+
+    }
+    section.social-count{
+        margin-bottom: 1.5rem;
+        .social+.social{
+            margin-top: 1rem;
+        }
+        .social{
+            background-color: $light-Grayish-Blue;
+            padding: 1rem 0;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            div.header{
+                display: flex;
+                align-items: center;
+                margin-bottom: .8rem;
+                img{
+                    width: 25%;
+                    height: .8rem;
+                    margin-right: .2rem;
+                }
+                p{
+                    color: $dark-Grayish-Blue;
+                    font-size: .5rem;
+                    font-weight: bold;
+                }
+            }
+            div.follower-count{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1rem;
+                h1{
+                    font-size: 1.8rem;
+                    font-weight: bolder;
+                }
+                p{
+                    color: $dark-Grayish-Blue;
+                    font-size: .5rem;
+                    text-transform: uppercase;
+                    letter-spacing: .1rem;
+                }
+            }
+            div.stat{
+                display:flex ;
+                align-items: center;
+                img{
+                    width: 9%;
+                    margin-right: .2rem;
+                }
+                p{
+                    font-size: .55rem;
+                }
+            }
+        }
+       
+        .social:hover{
+            @include container-hover();
+        }
+        @mixin stat-color {
+            div.stat p{
+                color: $lime-Green;
+            }
+        }
+        .facebook{
+           @include stat-color();
+           border-top: 3px solid $facebook;
+        }
+        .twitter{
+            @include stat-color();
+            border-top: 3px solid $twitter;
+        }
+        .instagram{
+            @include stat-color();
+            border-top: 3px solid rgb(192, 85, 140);
+        }
+        .youtube{
+            border-top: 3px solid $youtube;
+            div.stat p{
+                color: $right-Red;
+              
+            }
+
+        }
+    }
+    h4{
+        color: $dark-Grayish-Blue;
+        font-size: .9rem;
+        margin-bottom: 1.5rem;
+    }
+    section.overview{
+        .first-row{
+            margin-bottom: .6rem;
+        }
+       
+        h6{
+            color: $dark-Grayish-Blue;
+            font-size: .6rem;
+            margin-bottom: 1rem;
+        }
+       
+        .number{
+            font-weight: bold;
+        }
+        .box +.box{
+            margin-top: .6rem;
+        }
+        div.box{
+            background-color: $light-Grayish-Blue;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 5px;
+            div.stat{
+                img.social-icon{
+                    width: .9rem;
+                    display: block;
+                    margin-left: auto;
+                }
+            }
+            .details{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 1.3rem;
+                align-items: center;
+                p{
+                    font-size: .5rem;
+                }
+                img.arrow{
+                    width: .35rem ;
+                    margin-right:.15rem ;
+                }
+            }
+            
+
+        }
+        div.box:hover{
+            @include container-hover();
+        }
+        .green{
+            div.details p{
+                color: $lime-Green;
+            }
+        }
+        .red{
+            div.details p{
+                color: $right-Red;
+            }
+        }
+    }
+}
+@media (min-width:650px) {
+    main{
+        width: 70%;
+        header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            div.line{
+                display: none;
+            }
+
+            div.top-right{
+                p{
+                    margin-right: 1rem;
+                }
+            }
+        }
+        section.social-count{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 1rem;
+            div.social{
+                margin-top: 0 !important;
+
+            }
+        }
+        section.overview{
+            div.first-row, div.second-row{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: .5rem;
+               
+            }
+            div.box{
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
+@media (min-width: 900px) {
+    
+    main{
+        width: 90%;
+        max-width: 900px;
+        
+        section.social-count{
+            display: flex;
+            justify-content: space-between;
+           div.social{
+               flex-basis: 23%;
+            }
+        }
+        section.overview{
+            display: flex !important;
+            flex-direction: column !important;
+            h4{
+                font-size: 1rem !important;
+            }
+            div.first-row, div.second-row{
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .box{
+                flex-basis: 20%;
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
